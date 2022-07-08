@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Password</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <pre class="pree">
+            If Password Length is =< 8 then it is not acceptable
+            If Password Length is > 8 and
+                contain Capital Letter ,Numbers , Symbols => Password is accepted => Password Strength : &#129321;
+                contain Capial Letter,Symbols => Password Strength : &#128522;
+                contain Capital Letter,Numbers => Password Strength: &#128522;
+                contains only Numbers =>Password Strength: &#128524;
+                contains only small letters => Password Strength: &#128577;
+
+            Example: Aa12!$bba =>  &#129321;
+                        ASDsdf343 =>  &#128522;
+                        23432dkfsf => &#128524;
+                        dfgergegg =>  &#128577;
+
+
+        </pre>
+
+        <main>
+            <div class="inputdiv">
+              <input type="password" class="inputpass" />
+            </div>
+            <div class="previewpass"><i class=" fa fa-eye" style="font-size:24px"></i></div>
+            <div class="bar">
+              <div class="strenght"></div>
+            </div>
+            <p class="passstrenght-text">
+              Password Strength:
+              <span style="font-size: 15px;" class="icon">&#128542;</span>
+            </p>
+          </main>
+      <script src="index.js"></script>
+    </body>
+</html>
