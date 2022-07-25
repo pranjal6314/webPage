@@ -7,9 +7,16 @@ var passwordconstrains = {
   var inputpass = document.querySelector('.inputpass')
   var inputtext = inputpass.value
   var faeye = document.querySelector('.fa-eye')
+  let circle1=document.getElementsByClassName('circle');
   //
   faeye.addEventListener('mouseover', (e) => {
     inputpass.type = 'text'
+
+  })
+  inputpass.addEventListener('mouseover', (e) => {
+  
+    circle1.style.display="none";
+
   })
   faeye.addEventListener('mouseout', (e) => {
     inputpass.type = 'password'
@@ -140,3 +147,18 @@ var passwordconstrains = {
       alert('size is more')
     }
   })  
+
+
+
+  //cruser
+  let circle=document.querySelector('.circle');
+  const moveCircle=(e)=>{
+    circle.style.left=`${e.pageX}px`;
+    circle.style.top=`${e.pageY}px`;
+  }
+  const addPulse=()=>{
+    circle.classList.toggle('active');
+  }
+  window.addEventListener('mousemove',moveCircle);
+  window.addEventListener('mousedown',addPulse);
+  window.addEventListener('mouseup',addPulse);
