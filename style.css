@@ -98,4 +98,4 @@ main {
 }
 .circle.active{
   transform: translate(-50%,-50%) scale(.5);
-}
+} 
