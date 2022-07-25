@@ -85,3 +85,17 @@ main {
     font-size: 13px;
     text-shadow: 1px 2px 3px rgb(176, 174, 174);
   }
+
+.circle{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border:2px solid  #303346;
+  transition:transform .25s;
+
+}
+.circle.active{
+  transform: translate(-50%,-50%) scale(.5);
+}
